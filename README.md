@@ -14,3 +14,4 @@ The default retention rate of backups is 5. This means that if you just created 
 ## Known issues and plans for the future
 1. The backup might fail, and the backup file will still be created.
 2. It would be nice to store backups in some sort of directory (or even make it configurable).
+3. Logging. I might actually start with this one...
