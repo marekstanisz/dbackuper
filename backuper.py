@@ -6,6 +6,8 @@ import os
 from glob import glob
 from datetime import datetime
 
+DEFAULT_NO_OF_BACKUPS = 3
+
 def main():
     print("Starting database backup process...")
     with open('access.json', 'r') as f:
@@ -16,7 +18,7 @@ def main():
         user = db['user']
         password = db['password']
         db_name = db['db_name']
-        number_of_backups = db.get('number_of_backups', 3)
+        number_of_backups = db.get('number_of_backups', DEFAULT_NO_OF_BACKUPS)
 
         try:
             backup_database(port, host, user, password, db_name)
